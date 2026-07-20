@@ -1,0 +1,63 @@
+{
+  "meaningful_keywords": [
+    "salary",
+    "going rate",
+    "eligible",
+    "eligibility",
+    "english",
+    "fee",
+    "cost",
+    "duration",
+    "months",
+    "years",
+    "sponsor",
+    "certificate of sponsorship",
+    "registration",
+    "selection",
+    "cap",
+    "deadline",
+    "application",
+    "effective",
+    "immigration rules",
+    "graduate visa",
+    "skilled worker",
+    "h-1b"
+  ],
+  "sources": [
+    {
+      "name": "UK Skilled Worker visa overview",
+      "category": "UK Skilled Worker",
+      "url": "https://www.gov.uk/skilled-worker-visa"
+    },
+    {
+      "name": "UK Skilled Worker job and salary rules",
+      "category": "UK Skilled Worker",
+      "url": "https://www.gov.uk/skilled-worker-visa/your-job"
+    },
+    {
+      "name": "UK Skilled Worker English requirement",
+      "category": "UK Skilled Worker",
+      "url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english"
+    },
+    {
+      "name": "UK Graduate visa overview",
+      "category": "UK Graduate",
+      "url": "https://www.gov.uk/graduate-visa"
+    },
+    {
+      "name": "USCIS H-1B Specialty Occupations",
+      "category": "US H-1B",
+      "url": "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations"
+    },
+    {
+      "name": "USCIS H-1B electronic registration",
+      "category": "US H-1B",
+      "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/h-1b-electronic-registration-process"
+    },
+    {
+      "name": "USCIS H-1B cap season",
+      "category": "US H-1B",
+      "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/h-1b-cap-season"
+    }
+  ]
+}
