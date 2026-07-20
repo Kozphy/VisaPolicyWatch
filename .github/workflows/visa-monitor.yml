@@ -1,0 +1,86 @@
+name: Visa policy monitor
+
+on:
+  schedule:
+    # 00:00 UTC on day 1 = 08:00 Asia/Taipei
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+
+concurrency:
+  group: visa-policy-monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Check official visa pages
+        run: |
+          python visa_monitor.py \
+            --config sources.json \
+            --state data/state.json \
+            --report reports/latest.md \
+            --json-output reports/latest.json
+
+      - name: Read result
+        id: result
+        run: |
+          python - <<'PY'
+          import json, os
+          data = json.load(open("reports/latest.json", encoding="utf-8"))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"changed={str(data['has_meaningful_changes']).lower()}\n")
+              out.write(f"first_run={str(data['first_run']).lower()}\n")
+              out.write(f"errors={data['error_count']}\n")
+          PY
+
+      - name: Upload evidence report
+        uses: actions/upload-artifact@v4
+        with:
+          name: visa-policy-report
+          path: |
+            reports/latest.md
+            reports/latest.json
+          if-no-files-found: error
+
+      - name: Create GitHub issue for meaningful changes
+        if: steps.result.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Visa policy change detected $(date -u +%Y-%m-%d)"
+          gh issue create \
+            --title "$title" \
+            --body-file reports/latest.md \
+            --label "visa-policy" || \
+          gh issue create \
+            --title "$title" \
+            --body-file reports/latest.md
+
+      - name: Save new baseline and report
+        run: |
+          git config user.name "visa-policy-monitor[bot]"
+          git config user.email "visa-policy-monitor[bot]@users.noreply.github.com"
+          git add data/state.json reports/latest.md reports/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update visa policy snapshots"
+            git push
+          fi
