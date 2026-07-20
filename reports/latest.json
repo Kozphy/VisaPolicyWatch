@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-07-20T16:24:01+00:00",
+  "first_run": true,
+  "meaningful_change_count": 0,
+  "error_count": 0,
+  "has_meaningful_changes": false,
+  "has_errors": false,
+  "results": [
+    {
+      "name": "UK Skilled Worker visa overview",
+      "category": "UK Skilled Worker",
+      "url": "https://www.gov.uk/skilled-worker-visa",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    },
+    {
+      "name": "UK Skilled Worker job and salary rules",
+      "category": "UK Skilled Worker",
+      "url": "https://www.gov.uk/skilled-worker-visa/your-job",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    },
+    {
+      "name": "UK Skilled Worker English requirement",
+      "category": "UK Skilled Worker",
+      "url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    },
+    {
+      "name": "UK Graduate visa overview",
+      "category": "UK Graduate",
+      "url": "https://www.gov.uk/graduate-visa",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    },
+    {
+      "name": "USCIS H-1B Specialty Occupations",
+      "category": "US H-1B",
+      "url": "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    },
+    {
+      "name": "USCIS H-1B electronic registration",
+      "category": "US H-1B",
+      "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/h-1b-electronic-registration-process",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    },
+    {
+      "name": "USCIS H-1B cap season",
+      "category": "US H-1B",
+      "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/h-1b-cap-season",
+      "status": "baseline_created",
+      "meaningful": false,
+      "similarity": 1.0,
+      "added_lines": [],
+      "removed_lines": [],
+      "matched_keywords": [],
+      "error": null
+    }
+  ]
+}
