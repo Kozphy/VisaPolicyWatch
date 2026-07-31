@@ -1,5 +1,9 @@
 # VisaPolicyWatch
 
+<p align="center">
+  <img src="assets/visapolicywatch-104-banner.png" alt="VisaPolicyWatch — UK and US visa policy monitoring, automated change detection, audit-ready evidence reports, GitHub Actions automation, and human review" width="704">
+</p>
+
 Audit-ready monitoring of official UK Skilled Worker, UK Graduate visa, and US H-1B policy pages.
 
 VisaPolicyWatch fetches official GOV.UK and USCIS guidance, extracts the main policy text, stores a reproducible snapshot, compares future runs, and produces Markdown and JSON evidence reports. It flags changes involving salary, eligibility, fees, duration, sponsorship, registration, selection, caps, and deadlines.
